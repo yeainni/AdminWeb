@@ -1,0 +1,102 @@
+:root {
+    --hoverGreen: rgb(226, 248, 248);
+    --lightGreen: rgb(161, 197, 197);
+}
+
+.sidebar {
+    flex: 1;
+    border-right: 0.5px solid rgb(221, 238, 238);
+    min-height: 100vh;
+    background-color: white;
+    letter-spacing: 0.5px;
+
+    .top {
+        height: 48.2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            color: rgb(4, 148, 148);
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+    }
+
+    hr {
+        height: 0;
+        border: 0.2px solid var(--lightGreen);
+    }
+
+    .center {
+        padding-left: 10px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .title {
+                font-size: 12px;
+                font-weight: bold;
+                color: var(--lightGreen);
+                margin-top: 20px;
+                margin-bottom: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--hoverGreen);
+                }
+
+                .icon {
+                    font-size: 18px;
+                    color: rgb(4, 148, 148);
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: rgb(128, 128, 128);
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+
+        .colorOp {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid var(--mint);
+            cursor: pointer;
+            margin: 5px;
+
+            &:nth-child(1) {
+                background-color: whitesmoke;
+            }
+            &:nth-child(2) {
+                background-color: var(--mint);
+            }
+            &:nth-child(3) {
+                background-color: rgb(243, 154, 255);
+            }
+            &:nth-child(4) {
+                background-color: black;
+            }
+        }
+    }
+}

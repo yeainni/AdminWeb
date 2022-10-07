@@ -1,0 +1,37 @@
+:root {
+    --boxShadow: 1px 2px 6px 0px rgba(150, 150, 150, 0.3);
+    --webShadow: 1px 2px 6px 0px rgba(150, 150, 150, 0.3);
+    --mozShadow: 1px 2px 6px 0px rgba(150, 150, 150, 0.3);
+    --mint: rgb(4, 148, 148);
+}
+
+.home {
+    display: flex;
+
+    .homeContainer {
+        flex: 6;
+
+        .widgets,
+        .charts {
+            display: flex;
+            padding: 20px;
+            border-radius: 5px;
+            gap: 20px;
+        }
+
+        .listContainer {
+            box-shadow: var(--boxShadow);
+            -webkit-box-shadow: var(--webShadow);
+            -moz-box-shadow: var(--webShadow);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+
+            .listTitle {
+                font-weight: 400;
+                color: gray;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
