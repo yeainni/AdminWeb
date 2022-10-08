@@ -37,20 +37,20 @@ export default function Sidebar() {
                         <span> Dashboard </span>
                     </li>
 
-                    <Link to="/users" style={{ textDecoration: "none" }}>
-                        <li>
+                    <li>
+                        <Link to="/users" style={{ textDecoration: "none" }}>
                             <FaceIcon className='icon' />
                             <span> Users </span>
-                        </li>
-                    </Link>
+                        </Link>
+                    </li>
 
                     <div className='title'> LIST </div>
-                    <Link to="/products" style={{ textDecoration: "none" }}>
-                        <li>
+                    <li>
+                        <Link to="/products" style={{ textDecoration: "none" }}>
                             <InventoryIcon className='icon' />
                             <span> Products </span>
-                        </li>
-                    </Link>
+                        </Link>
+                    </li>
 
                     <li>
                         <AddCardIcon className='icon' />
@@ -105,15 +105,15 @@ export default function Sidebar() {
                 <div className='colorOp'
                     onClick={() => dispatch({ type: "LIGHT" })}
                 />
-                
-                <div className='colorOp'
-                />
-                
-                <div className='colorOp'
-                />
-                
+
                 <div className='colorOp'
                     onClick={() => dispatch({ type: "DARK" })}
+                />
+
+                <div className='colorOp'
+                />
+
+                <div className='colorOp'
                 />
             </div>
         </div>

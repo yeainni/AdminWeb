@@ -50,13 +50,12 @@ function App() {
               </RequireAuth>
             } />
 
-            <Route path="new" element=
-              {
-                <RequireAuth>
-                  <New inputs={userInputs}
-                    title="Add New User" />
-                </RequireAuth>
-              } />
+            <Route path="new" element={
+              <RequireAuth>
+                <New inputs={userInputs}
+                  title="Add New User" />
+              </RequireAuth>
+            } />
 
           </Route>
 
@@ -73,13 +72,12 @@ function App() {
               </RequireAuth>
             } />
 
-            <Route path="new" element=
-              {
-                <RequireAuth>
-                  <New inputs={productInputs}
-                    title="Add New Product" />
-                </RequireAuth>
-              } />
+            <Route path="new" element={
+              <RequireAuth>
+                <New inputs={productInputs}
+                  title="Add New Product" />
+              </RequireAuth>
+            } />
 
           </Route>
 
