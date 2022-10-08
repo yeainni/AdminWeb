@@ -23,18 +23,19 @@
             .left {
                 flex: 1;
                 text-align: center;
+                margin-top: 10px;
 
                 img {
                     width: 120px;
                     height: 120px;
                     border-radius: 50%;
                     object-fit: cover;
-                    padding-top: 10px;
                 }
             }
 
             .right {
                 flex: 2;
+                margin-top: 10px;
 
                 form {
                     display: flex;
@@ -76,6 +77,10 @@
                         font-weight: bold;
                         cursor: pointer;
                         margin: 10px 20px;
+                        &:disabled {
+                            background-color: rgba(29, 182, 182, 0.377);
+                            cursor: not-allowed;
+                        }
                     }
                 }
             }

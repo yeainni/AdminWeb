@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./login.scss"
 import {
-    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
     // getAuth,
 } from "firebase/auth"
-import { auth } from "../../Firebase";
+import { auth } from "../../Firebase"
+import { useNavigate } from "react-router-dom"
+import { AuthContext } from "../../Context/AuthContext"
 
 
 export default function Login() {
@@ -13,17 +15,21 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+
+    const { dispatch } = useContext(AuthContext);
+
     const handleLogin = (e) => {
         //prevent to refreshing page from submit action
         e.preventDefault();
 
         // const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
                 const user = userCredential.user;
-
-                console.log(user);
+                dispatch({ type: "LOGIN", payload: user })
+                // console.log("user")
+                navigate("/");
             })
 
             .catch((error) => {
